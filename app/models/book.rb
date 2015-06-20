@@ -3,7 +3,7 @@ class Book
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
-  index_name "users-#{Rails.env}"
+  index_name "books-#{Rails.env}"
 
   field :title, type: String
   field :author, type: String
