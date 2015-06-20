@@ -2,14 +2,16 @@
 
 * MongoDB
 
-  cp config/mongoid.yml.example config/mongoid.yml
+    $ cp config/mongoid.yml.example config/mongoid.yml
 
-  rake db:seed
+    $ rake db:seed
 
 * Zeus
 
-    zeus start
+    $ gem install zeus
 
-    zeus console
+    $ zeus start
 
-    zeus server
+    $ zeus console
+
+    $ zeus server
