@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/elasticsearch/elasticsearch-rails.git
+  revision: ded20356920802c35d258756113acfd95b25ade6
+  specs:
+    elasticsearch-model (0.1.7)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-rails (0.1.7)
+
+GIT
   remote: git://github.com/jkrmr/jazz_hands.git
   revision: 5d672e52772d9abf4064260186556fa963a75604
   specs:
@@ -154,6 +164,14 @@ GEM
       json
       thread
       thread_safe
+    elasticsearch (1.0.12)
+      elasticsearch-api (= 1.0.12)
+      elasticsearch-transport (= 1.0.12)
+    elasticsearch-api (1.0.12)
+      multi_json
+    elasticsearch-transport (1.0.12)
+      faraday
+      multi_json
     equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.3.0)
@@ -162,6 +180,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     fast-stemmer (1.0.2)
     flay (2.4.0)
       ruby_parser (~> 3.0)
@@ -183,6 +203,7 @@ GEM
       haml (>= 3.1, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    hashie (3.4.2)
     highline (1.7.1)
     hike (1.2.3)
     hirb (0.7.3)
@@ -242,6 +263,8 @@ GEM
       mongoid (>= 3.0.1)
       rake
       rspec (>= 2.9)
+    mongoid-tree (2.0.0)
+      mongoid (>= 4.0, <= 5.0)
     mongoid_search (0.3.2)
       fast-stemmer (~> 1.0.0)
       mongoid (>= 3.0.0)
@@ -250,6 +273,7 @@ GEM
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     newrelic_rpm (3.10.0.279)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -457,6 +481,8 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   database_cleaner
   devise
+  elasticsearch-model!
+  elasticsearch-rails!
   factory_girl_rails
   haml
   haml-rails
@@ -470,6 +496,7 @@ DEPENDENCIES
   mongoid!
   mongoid-rspec
   mongoid-rspec-callbacks
+  mongoid-tree
   mongoid_search
   newrelic_rpm
   quiet_assets
