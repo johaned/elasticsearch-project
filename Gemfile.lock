@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/elasticsearch/elasticsearch-rails.git
-  revision: ded20356920802c35d258756113acfd95b25ade6
+  remote: git://github.com/Johaned/elasticsearch-rails.git
+  revision: 6b7b19d9a891c5cd0d3777c26a4bedbda2793a79
   specs:
     elasticsearch-model (0.1.7)
       activesupport (> 3)
@@ -282,7 +282,7 @@ GEM
     orm_adapter (0.5.0)
     parser (2.2.0.3)
       ast (>= 1.1, < 3.0)
-    posix-spawn (0.3.10)
+    posix-spawn (0.3.11)
     powerpack (0.1.0)
     procto (0.0.2)
     pry (0.10.1)
@@ -294,14 +294,14 @@ GEM
       pry (~> 0.10)
     pry-coolline (0.2.5)
       coolline (~> 0.5)
-    pry-doc (0.6.0)
+    pry-doc (0.8.0)
       pry (~> 0.9)
       yard (~> 0.8)
     pry-git (0.2.3)
       diffy
       grit
       pry (>= 0.9.8)
-    pry-rails (0.3.3)
+    pry-rails (0.3.4)
       pry (>= 0.9.10)
     pry-remote (0.1.8)
       pry (~> 0.9)
