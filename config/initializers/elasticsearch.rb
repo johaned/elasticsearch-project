@@ -7,8 +7,7 @@ unless Book.__elasticsearch__.index_exists?
   Book.import
 end
 
-# client.indices.delete index: Book.index_name rescue nil
-# client.bulk index: Book.index_name,
-#             type:  'book',
-#             body:  Book.all.map { |b| { index: { _id: b.id.to_s, data: b.attributes } } },
-#             refresh: true
+unless User.__elasticsearch__.index_exists?
+  User.__elasticsearch__.create_index! force: true
+  User.import
+end

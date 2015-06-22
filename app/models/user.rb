@@ -1,9 +1,18 @@
 class User
   include Mongoid::Document
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+
+  # index name for keeping consistency among existing environments
+  index_name "users-#{Rails.env}"
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  field :first_name, type: String
+  field :last_name, type: String
 
   ## Database authenticatable
   field :email,              type: String, default: ""
@@ -33,6 +42,12 @@ class User
   # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
+
+  def as_indexed_json(options={})
+    as_json(
+      except: [:id, :_id],
+    )
+  end
 
   def self.serialize_into_session(record)
     [record.id.to_s, record.authenticatable_salt]
