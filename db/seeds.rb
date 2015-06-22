@@ -2,7 +2,7 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 
-user_names = ['Elva Lazo', 'Allam Britto', 'Elvis Teck', 'Jhonny Melavo']
+user_names = ['John Doe', 'Allam Britto', 'Bob Dylan', 'Alice Cooper', 'Alice Pasquini']
 
 user_names.each do |user_name|
   user_params = {
