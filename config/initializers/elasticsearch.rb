@@ -14,4 +14,5 @@ end
 unless User.__elasticsearch__.index_exists?
   User.__elasticsearch__.create_index! force: true
   User.import
+  Adviser.import
 end

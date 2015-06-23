@@ -16,6 +16,20 @@ end
 
 puts 'Users have been successfully created'
 
+adviser_names = ['Alex Morgan', 'Nadine Angerer', 'Michelle Akers', 'Mia Hamm', 'Lady Andrade']
+
+adviser_names.each do |adviser_name|
+  adviser_params = {
+    first_name: adviser_name.split(' ').first,
+    last_name: adviser_name.split(' ').last,
+    email: "#{adviser_name.downcase.gsub(' ', '.')}@example.com",
+    password: '12345678'
+  }
+  Adviser.find_or_create_by adviser_params
+end
+
+puts 'Advisers have been successfully created'
+
 books = [['The Laughing Monsters', 'Denis Johnson'], ['The Children Act', 'Ian McEwan'], ['Station Eleven', 'Emily St. John Mandel'], ['The Bone Clocks', 'David Mitchell'], ['The Pearl That Broke Its Shell', 'Nadia Hashimi']]
 
 books.each do |title, author|
