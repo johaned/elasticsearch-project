@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/Johaned/elasticsearch-rails.git
-  revision: 6b7b19d9a891c5cd0d3777c26a4bedbda2793a79
+  remote: git://github.com/elasticsearch/elasticsearch-rails.git
+  revision: ded20356920802c35d258756113acfd95b25ade6
   specs:
     elasticsearch-model (0.1.7)
       activesupport (> 3)

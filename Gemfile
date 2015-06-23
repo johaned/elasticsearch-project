@@ -35,11 +35,11 @@ gem 'mongoid_search'
 gem 'will_paginate_mongoid'
 gem 'cancancan', '~> 1.10.1'
 
-# gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
-# gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 
-gem 'elasticsearch-model', git: 'git://github.com/Johaned/elasticsearch-rails.git'
-gem 'elasticsearch-rails', git: 'git://github.com/Johaned/elasticsearch-rails.git'
+# gem 'elasticsearch-model', git: 'git://github.com/Johaned/elasticsearch-rails.git'
+# gem 'elasticsearch-rails', git: 'git://github.com/Johaned/elasticsearch-rails.git'
 
 group :development do
   gem 'haml-rails' # only in dev, because haml-rails adds the generators
