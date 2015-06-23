@@ -1,4 +1,4 @@
-client = Elasticsearch::Model.client = Elasticsearch::Client.new url: ENV['ELASTICSEARCH_URL'] || 'http://localhost:9200'
+client = Elasticsearch::Model.client = Elasticsearch::Client.new url: ENV['SEARCHBOX_URL'] || 'http://localhost:9200'
 
 # Book.__elasticsearch__.client.indices.delete index: Book.index_name rescue nil
 
